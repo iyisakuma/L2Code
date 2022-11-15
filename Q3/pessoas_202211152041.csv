@@ -1,0 +1,5 @@
+"id","nome","inadimplente","dt_completo","contrato_id"
+1,Cristian Ghyprievy,true,,2
+2,Joana Cabel,true,,1
+3,John Serial,true,,3
+4,Michael Seven,false,2021-09-20,2

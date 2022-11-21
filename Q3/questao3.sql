@@ -7,7 +7,7 @@ CREATE TABLE CONTRATOS(
 CREATE TABLE PESSOAS(
 	id int primary key,
 	nome varchar(255),
-	inadimplent bool,
+	inadimplente bool,
 	dt_completo date,
 	contrato_id int,
 	foreign key(contrato_id) references contratos(id)
@@ -48,14 +48,14 @@ SELECT pessoa.nome as NOME, extract(day from pagamento.dt_pagamento) as DIA_MES,
 FROM PESSOAS pessoa JOIN CONTRATOS contrato on pessoa.contrato_id = contrato.id
 	JOIN PAGAMENTOS pagamento on pessoa.id = pagamento.pessoa_id
 WHERE pessoa.inadimplente = true
-ORDER BY 1 
+ORDER BY 1;
 
 --Parte 2 da questão 3
 ---Selecionar o nome e valor total pago de clientes com pagamento completo.
 SELECT pessoa.nome as NOME, (contrato.valor_parcela * contrato.parcelas) as VALOR_PARCELA
 FROM PESSOAS pessoa JOIN CONTRATOS contrato on pessoa.contrato_id = contrato.id
 WHERE pessoa.inadimplente = false
-ORDER BY 1 
+ORDER BY 1;
 
 
 

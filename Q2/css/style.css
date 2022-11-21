@@ -407,6 +407,11 @@ span {
     line-height: 20px;
     letter-spacing: 0.2px;
 }
+.slides{
+    background-color: white;
+    margin: 0 auto  ;
+    width: 960px;
+}
 
 /* Tags */
 body {
